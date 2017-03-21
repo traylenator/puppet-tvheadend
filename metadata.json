@@ -1,0 +1,14 @@
+{
+  "name": "puppet-tvheadend",
+  "version": "0.1.0",
+  "author": "puppet",
+  "summary": "Install and configure Tvheadend",
+  "license": "Apache-2.0",
+  "source": "https://github.com/traylenator/puppet-tvheadend",
+  "project_page": "https://github.com/traylenator/puppet-tvheadend",
+  "issues_url": "https://github.com/traylenator/puppet-tvheadend/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
