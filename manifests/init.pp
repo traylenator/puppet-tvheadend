@@ -1,8 +1,21 @@
 class tvheadend (
-  Enum['release','stable','unstable','obsolete'] $repo = 'stable',
-  String $release = $facts['lsbdistcodename'],
+  Enum['release','stable','unstable','obsolete'] $release = 'release',
+  String $distribution = $facts['lsbdistcodename'],
+  String $user = 'hts',
+  String $home = '/var/lib/hts',
+  String $group = 'hts',
+  Optional[Array[String]] $secondary = ['video'],
+  String $admin_user = 'hts',
+  Optional[String] $admin_password = undef,
 ) {
 
-  include ::tvheadend::install
+  contain ::tvheadend::install
+  contain ::tvheadend::config
+  contain ::tvheadend::service
+
+  Class['::tvheadend::install'] ->
+  Class['::tvheadend::config'] ~>
+  Class['::tvheadend::service']
+
 
 }
