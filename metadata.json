@@ -1,14 +1,51 @@
 {
   "name": "puppet-tvheadend",
-  "version": "0.1.0",
-  "author": "puppet",
-  "summary": "Install and configure Tvheadend",
+  "version": "0.0.0",
+  "author": "Vox Pupuli",
+  "summary": "Puppet TVHeadend management module",
   "license": "Apache-2.0",
-  "source": "https://github.com/traylenator/puppet-tvheadend",
-  "project_page": "https://github.com/traylenator/puppet-tvheadend",
-  "issues_url": "https://github.com/traylenator/puppet-tvheadend/issues",
+  "source": "https://github.com/voxpupuli/puppet-tvheadend.git",
+  "project_page": "http://github.com/voxpupuli/puppet-tvheadend",
+  "issues_url": "https://github.com/voxpupuli/puppet-tvheadend/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.6.0 <5.0.0"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": ">= 2.1.0 <3.0.0"
+    },
+    {
+      "name": "puppetlabs/concat",
+      "version_requirement": ">= 1.2.5 <3.0.0"
+    },
+    {
+      "name": "stm/debconf",
+      "version_requirement": ">= 2.0.0 <3.0.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.6.1 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04",
+        "12.04",
+        "16.04"
+      ]
+    }
   ]
 }
-
