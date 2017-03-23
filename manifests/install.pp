@@ -1,12 +1,12 @@
 class tvheadend::install (
-  $release      = $tvheadend::release,
-  $distribution = $tvheadend::distribution,
-  $user         = $tvheadend::user,
-  $home         = $tvheadend::home,
-  $group        = $tvheadend::group,
-  $secondary    = $tvheadend::secondary,
-  $admin_user   = $tvheadend::admin_user,
-  $admin_pass   = $tvheadend::admin_password,
+  $release         = $tvheadend::release,
+  $distribution    = $tvheadend::distribution,
+  $user            = $tvheadend::user,
+  $home            = $tvheadend::home,
+  $group           = $tvheadend::group,
+  $secondary       = $tvheadend::secondary,
+  $admin_username  = $tvheadend::admin_username,
+  $admin_password  = $tvheadend::admin_password,
 ) inherits tvheadend {
 
   group{$group:
@@ -25,6 +25,7 @@ class tvheadend::install (
     before     => Package['tvheadend'],
   }
 
+  ensure_packages(['apt-transport-https'])
   include ::apt
 
   apt::source { 'tvheadend':
@@ -39,23 +40,24 @@ class tvheadend::install (
     include  => {
       'deb' => true,
     },
-    before => Package['tvheadend'],
+    before   => Package['tvheadend'],
+    require  => Package['apt-transport-https'],
   }
   if $admin_password {
     debconf{'tvheadend/admin_password':
-      type  => 'password',
-      value => $admin_password,
+      type   => 'password',
+      value  => $admin_password,
       before => Package['tvheadend'],
     }
   }
   debconf{'tvheadend/webinterface':
-    type  => 'note',
-    value => 'puppet installed tvheadend',
+    type   => 'note',
+    value  => 'puppet installed tvheadend',
     before => Package['tvheadend'],
   }
   debconf{'tvheadend/admin_username':
-    type  => 'string',
-    value => $admin_username,
+    type   => 'string',
+    value  => $admin_username,
     before => Package['tvheadend'],
   }
   package{'tvheadend':
