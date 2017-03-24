@@ -1,5 +1,12 @@
 # Puppet module for TVHeadend
 
+[![Build Status](https://travis-ci.org/voxpupuli/puppet-tvheadend.png?branch=master)](https://travis-ci.org/voxpupuli/puppet-tvheadend)
+[![Code Coverage](https://coveralls.io/repos/github/voxpupuli/puppet-tvheadend/badge.svg?branch=master)](https://coveralls.io/github/voxpupuli/puppet-tvheadend)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/puppet/tvheadend.svg)](https://forge.puppetlabs.com/puppet/tvheadend)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/puppet/tvheadend.svg)](https://forge.puppetlabs.com/puppet/tvheadend)
+[![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/puppet/tvheadend.svg)](https://forge.puppetlabs.com/puppet/tvheadend)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/puppet/tvheadend.svg)](https://forge.puppetlabs.com/puppet/tvheadend)
+
 #### Table of Contents
 
 1. [Description](#description)
