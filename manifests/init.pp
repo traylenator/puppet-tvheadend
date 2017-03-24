@@ -5,7 +5,7 @@ class tvheadend (
   String $home = '/var/lib/hts',
   String $group = 'hts',
   Optional[Array[String]] $secondary = ['video'],
-  String $admin_user = 'hts',
+  String $admin_username = 'hts',
   Optional[String] $admin_password = undef,
 ) {
 

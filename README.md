@@ -42,8 +42,8 @@ class{'::tvheadend':
 * `home` Default home directory to run the service, defaults to `/var/lib/hts`.
 * `distribution` defaults to `$facts['lsbdistcodename']`.
 * `secondary` Array of groups user should be in. Defaults to `['video']`.
-* `admin_user` Web interface admin user id. Defaults to `hts`.
-* `admin_password` Password of web `admin_user`.
+* `admin_username` Web interface admin user id. Defaults to `hts`.
+* `admin_password` Password of web `admin_username`.
 
 ## Limitations
 The module is currently very particular to Debian, Ubuntu.
