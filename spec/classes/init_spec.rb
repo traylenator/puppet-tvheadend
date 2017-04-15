@@ -6,6 +6,7 @@ describe 'tvheadend' do
       let(:facts) do
         facts
       end
+
       it { is_expected.to compile.with_all_deps }
       it { is_expected.to contain_class('tvheadend') }
       it { is_expected.to contain_class('tvheadend::install') }
@@ -32,15 +33,16 @@ describe 'tvheadend' do
             user: 'steve',
             group: 'tray',
             home: '/tmp/h',
-            secondary: %w(one two),
+            secondary: %w[one two],
             admin_username: 'foo',
             admin_password: 'bar'
           }
         end
+
         it { is_expected.to contain_apt__source('tvheadend').with_release('mine') }
         it { is_expected.to contain_apt__source('tvheadend').with_repos('stable') }
         it { is_expected.to contain_user('steve').with_gid('tray') }
-        it { is_expected.to contain_user('steve').with_groups(%w(one two)) }
+        it { is_expected.to contain_user('steve').with_groups(%w[one two]) }
         it { is_expected.to contain_group('tray') }
         it { is_expected.to contain_shellvar('TVH_USER').with_value('steve') }
         it { is_expected.to contain_shellvar('TVH_GROUP').with_value('tray') }
