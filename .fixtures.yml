@@ -5,5 +5,3 @@ fixtures:
     augeasproviders_shellvar: "https://github.com/hercules-team/augeasproviders_shellvar"   
     debconf: 'https://github.com/smoeding/puppet-debconf'
     stdlib: 'https://github.com/puppetlabs/puppetlabs-stdlib'
-  symlinks:
-   "tvheadend": "#{source_dir}"
