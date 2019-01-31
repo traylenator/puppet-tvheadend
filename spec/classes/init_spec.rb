@@ -40,7 +40,7 @@ describe 'tvheadend' do
         end
 
         it { is_expected.to contain_apt__source('tvheadend').with_release('mine') }
-        it { is_expected.to contain_apt__source('tvheadend').with_repos('stable') }
+        it { is_expected.to contain_apt__source('tvheadend').with_repos('main') }
         it { is_expected.to contain_user('steve').with_gid('tray') }
         it { is_expected.to contain_user('steve').with_groups(%w[one two]) }
         it { is_expected.to contain_group('tray') }
