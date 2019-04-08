@@ -26,7 +26,7 @@ class tvheadend::install (
   }
 
   ensure_packages(['apt-transport-https'])
-  include ::apt
+  include apt
 
   apt::source { 'tvheadend':
     comment  => 'tvheadend.org apt repository',

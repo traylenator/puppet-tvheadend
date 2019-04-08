@@ -9,9 +9,9 @@ class tvheadend (
   Optional[String] $admin_password = undef,
 ) {
 
-  contain ::tvheadend::install
-  contain ::tvheadend::config
-  contain ::tvheadend::service
+  contain tvheadend::install
+  contain tvheadend::config
+  contain tvheadend::service
 
   Class['::tvheadend::install']
   -> Class['::tvheadend::config']
