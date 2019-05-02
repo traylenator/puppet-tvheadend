@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v1.0.0](https://github.com/voxpupuli/puppet-tvheadend/tree/v1.0.0) (2019-03-09)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-tvheadend/compare/v0.1.1...v1.0.0)
+
+**Breaking changes:**
+
+- modulesync 2.5.1 and drop Puppet 4 [\#25](https://github.com/voxpupuli/puppet-tvheadend/pull/25) ([bastelfreak](https://github.com/bastelfreak))
+
+**Fixed bugs:**
+
+- Update repository to apt.tvheadend.org [\#22](https://github.com/voxpupuli/puppet-tvheadend/pull/22) ([mergwyn](https://github.com/mergwyn))
+
+**Closed issues:**
+
+- The repository for tvheadend has changed [\#21](https://github.com/voxpupuli/puppet-tvheadend/issues/21)
+
+**Merged pull requests:**
+
+- modulesync 2.2.0 and allow puppet 6.x [\#20](https://github.com/voxpupuli/puppet-tvheadend/pull/20) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v0.1.1](https://github.com/voxpupuli/puppet-tvheadend/tree/v0.1.1) (2018-09-06)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-tvheadend/compare/v0.1.0...v0.1.1)
