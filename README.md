@@ -23,8 +23,8 @@
 
 Installation and initial setup of TVHeadend.
 
-Tvheadend is a TV streaming server and recorder for Linux, 
-FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, 
+Tvheadend is a TV streaming server and recorder for Linux,
+FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T,
 ATSC, ISDB-T, IPTV, SAT>IP and HDHomeRun as input sources.
 
 http://tvheadend.org

@@ -26,13 +26,13 @@ class tvheadend::install (
   }
 
   ensure_packages(['apt-transport-https'])
-  include ::apt
+  include apt
 
   apt::source { 'tvheadend':
     comment  => 'tvheadend.org apt repository',
-    location => 'https://dl.bintray.com/tvheadend/deb',
+    location => "https://apt.tvheadend.org/${release}",
     release  => $distribution,
-    repos    => $release,
+    repos    => 'main',
     key      => {
       'id'     => '8756C4F765C9AC3CB6B85D62379CE192D401AB61',
       'server' => 'hkp://keyserver.ubuntu.com:80',
