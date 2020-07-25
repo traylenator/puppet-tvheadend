@@ -8,13 +8,12 @@ class tvheadend::install (
   $admin_username  = $tvheadend::admin_username,
   $admin_password  = $tvheadend::admin_password,
 ) inherits tvheadend {
-
-  group{$group:
+  group { $group:
     ensure => present,
     system => true,
     before => Package['tvheadend'],
   }
-  user{$user:
+  user { $user:
     ensure     => present,
     system     => true,
     home       => $home,
@@ -44,23 +43,23 @@ class tvheadend::install (
     require  => Package['apt-transport-https'],
   }
   if $admin_password {
-    debconf{'tvheadend/admin_password':
+    debconf { 'tvheadend/admin_password':
       type   => 'password',
       value  => $admin_password,
       before => Package['tvheadend'],
     }
   }
-  debconf{'tvheadend/webinterface':
+  debconf { 'tvheadend/webinterface':
     type   => 'note',
     value  => 'puppet installed tvheadend',
     before => Package['tvheadend'],
   }
-  debconf{'tvheadend/admin_username':
+  debconf { 'tvheadend/admin_username':
     type   => 'string',
     value  => $admin_username,
     before => Package['tvheadend'],
   }
-  package{'tvheadend':
+  package { 'tvheadend':
     ensure  => present,
   }
 }

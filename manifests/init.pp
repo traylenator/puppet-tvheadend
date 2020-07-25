@@ -8,7 +8,6 @@ class tvheadend (
   String $admin_username = 'hts',
   Optional[String] $admin_password = undef,
 ) {
-
   contain tvheadend::install
   contain tvheadend::config
   contain tvheadend::service
