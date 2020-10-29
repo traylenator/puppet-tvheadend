@@ -12,7 +12,7 @@ class tvheadend (
   contain tvheadend::config
   contain tvheadend::service
 
-  Class['::tvheadend::install']
-  -> Class['::tvheadend::config']
-  ~> Class['::tvheadend::service']
+  Class['tvheadend::install']
+  -> Class['tvheadend::config']
+  ~> Class['tvheadend::service']
 }
