@@ -34,7 +34,7 @@ http://tvheadend.org
 ### Beginning with tvheadend
 A tvheadend server can be set up and  installed with
 ```puppet
-class{'::tvheadend':
+class{'tvheadend':
   release        => 'stable',
   admin_password => 'password',
 }
