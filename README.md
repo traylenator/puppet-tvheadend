@@ -7,6 +7,8 @@
 [![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/puppet/tvheadend.svg)](https://forge.puppetlabs.com/puppet/tvheadend)
 [![Puppet Forge - scores](https://img.shields.io/puppetforge/f/puppet/tvheadend.svg)](https://forge.puppetlabs.com/puppet/tvheadend)
 
+**This module is archived because it was unmaintained.** Please see https://github.com/voxpupuli/puppet-tvheadend/issues/47 and https://voxpupuli.org/docs/deprecated_and_archived_modules/ for more information.
+
 #### Table of Contents
 
 1. [Description](#description)
